@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Football</title>
+    <meta name="description" content="My first PWA" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#3f51b5" />
+  </head>
+  <body>
+    <!-- Navigasi -->
+    <nav class="indigo" role="navigation">
+      <div class="nav-wrapper container">
+        <a href="./index.html" class="brand-logo" id="logo-container">Football Article</a>
+        <a href="./index.html" class="sidenav-trigger" data-target="nav-mobile">
+          <i class="material-icons">arrow_back</i>
+        </a>
+        <ul class="topnav right hide-on-med-and-down"></ul>
+        <ul class="sidenav" id="nav-mobile"></ul>
+      </div>
+    </nav>
+    <!-- Akhir Navigasi -->
+    <br>
+    <div class="container valign-wrapper row" id="body-content"></div>
+    
+    <h3 class="center-align plyr">Players</h3>
+      <div class="row container" id="">
+        <table class="" id="table">
+            <thead>
+                <tr>
+                    <th class="center-align" >Name</th>
+                    <th class="center-align" >Position</th>
+                </tr>
+            </thead>
+            <tbody id="tablePlayer"></tbody>
+        </table>
+    </div>
+
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large red" id="save">
+      <i class="large material-icons icon-save">save</i>
+      </a>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-copyright indigo center-align white-text" style="padding: 10px; border-radius: 5px;">
+        © 2020 Rivari - dicoding
+      </div>
+    </footer>
+    
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/snarkdown@1.0.2/dist/snarkdown.umd.js"
+    ></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/fetchAPI.js"></script>
+    <script src="js/idb.js"></script>
+    <script src="js/db.js"></script>
+    <script src="js/registerSWArticle.js"></script>
+  </body>
+</html>
