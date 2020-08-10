@@ -30,8 +30,9 @@ function error(error) {
 const MatchGetArticlesFootball = (team) => {
   let articlesHTML = `
     `;
-    const match = team.matches;
+    const match = team.matches.reverse().slice(0, 20);
     match.forEach(hasil => {
+      if (hasil.score.fullTime.homeTeam || hasil.score.fullTime.awayTeam) {
         articlesHTML += `
                 <tr>
                     <td class="center-align" ><span>${hasil.homeTeam.name}</span> <br>
@@ -43,6 +44,7 @@ const MatchGetArticlesFootball = (team) => {
                     <td class="center-align score">${hasil.score.fullTime.awayTeam}</td>
                 </tr> 
             `;
+      }
     });
     document.getElementById("tbody").innerHTML = articlesHTML;
 }
